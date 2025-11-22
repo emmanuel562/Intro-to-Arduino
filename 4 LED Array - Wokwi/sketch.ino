@@ -37,6 +37,4 @@ void loop() {
   digitalWrite(led3, LOW);
   digitalWrite(led4, HIGH);
   delay(count);
-
-delay(200);
 }
