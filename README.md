@@ -1,4 +1,4 @@
-# Intro-to-Arduino
+# 🤖 Intro-to-Arduino
 This repository contains my practice exercises from learning Arduino programming.
 I followed Paul McWhorter’s “Arduino Tutorial Series” on YouTube and used the lessons to gain an understanding of the basics of microcontrollers, electronics, and C++ programming.
 
