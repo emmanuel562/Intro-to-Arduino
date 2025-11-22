@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "Emmanuel Moses",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard",
+      "id": "bb1",
+      "top": 121.4,
+      "left": -13.6,
+      "rotate": 180,
+      "attrs": { "color": "#eeefed" }
+    },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 87, "left": -317.4, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo2", "top": 295.6, "left": 67.2, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 161.9, "left": 67, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:5V", "bb1:tp.50", "red", [ "v0" ] ],
+    [ "uno:GND.2", "bb1:tn.50", "black", [ "v0" ] ],
+    [ "pot1:VCC", "bb1:tp.43", "red", [ "v0" ] ],
+    [ "pot1:GND", "bb1:tn.45", "black", [ "v0" ] ],
+    [ "pot1:SIG", "uno:A5", "green", [ "v28.8", "h-0.4", "v38.4", "h-172.8" ] ],
+    [ "servo2:GND", "bb1:tn.47", "black", [ "h0", "v-38.4" ] ],
+    [ "servo2:V+", "bb1:tp.48", "red", [ "h0" ] ],
+    [ "servo2:PWM", "uno:11", "orange", [ "h-432", "v-307", "h192" ] ]
+  ],
+  "serialMonitor": { "display": "auto", "newline": "none" },
+  "dependencies": {}
+}
