@@ -12,6 +12,7 @@ void setup() {
 
 void loop() {
   result = digitalRead(btn);
+  Serial.print("The Button state is: ");
   Serial.println(result);
   if (result == 0){
     digitalWrite(led, HIGH);
