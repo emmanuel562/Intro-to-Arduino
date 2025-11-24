@@ -5,7 +5,7 @@
 // int wait = 1000;
 // float volt;
 
-// Ecample 2 Variables
+//Example 2 Variables
 int potPin = A2;
 int ledPin = 3;
 int potVal;
@@ -22,7 +22,8 @@ void setup() {
 
 void loop() {
   // Example 1 Codes
-  // potVal = analogRead(potPin);
+  // readPot();
+  //Linear brightness
   // volt = (5./1023.) * potVal;
   // Serial.print("The potVal is: ");
   // Serial.println(potVal);
@@ -30,18 +31,17 @@ void loop() {
   // Serial.println(volt);
   // delay(wait);
 
-  //Example 2
-  potVal = analogRead(potPin);
-  //Linear brightness
-  // brightness = (255./1023.) * potVal;
-
-  //Exponential Brightness
+  //Example 2: Exponential brightness
+  readPot();
   brightness = pow(2, potVal/127.875) - 1;
   Serial.print("The potVal is: ");
   Serial.println(potVal);
-  Serial.print("The corresponding PWM Value is:");
+  Serial.print("The corresponding PWM Value is: ");
   Serial.println(brightness);
   analogWrite(ledPin, brightness);
   delay(wait);
+}
 
+float readPot() {
+  potVal = analogRead(potPin);
 }
